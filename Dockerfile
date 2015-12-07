@@ -1,15 +1,9 @@
-FROM ubuntu
-MAINTAINER Aaron Daniel aaron@ninjawarriors.io
-
-# original Dockerfile borrowed from moul/weechat
-# updated to use latest weechat and a single command for installation
-# to avoid the 42 layers issue
+FROM ubuntu:15.10
+MAINTAINER Philip Marc Schwartz philip@progmad.com 
 
 RUN \
   apt-get -q -y update ;\
   apt-get install -y python-software-properties ;\
-  add-apt-repository -y ppa:nesthib/weechat-stable ;\
-  apt-get -q -y update ;\
   apt-get install -y openssh-server weechat tmux ;\
   mkdir /var/run/sshd ;\
   useradd -m docker -s /bin/bash
