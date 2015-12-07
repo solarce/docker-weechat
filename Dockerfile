@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:wily
 MAINTAINER Philip Marc Schwartz philip@progmad.com 
 
 RUN \
