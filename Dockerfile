@@ -9,6 +9,7 @@ RUN \
   useradd -m docker -s /bin/bash
 
 EXPOSE 22
+EXPOSE 9001
 
 ADD bashrc /home/docker/.bashrc
 ADD startup.sh /usr/bin/startup.sh
