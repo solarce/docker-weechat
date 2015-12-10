@@ -6,7 +6,8 @@ RUN \
   apt-get install -y python-software-properties ;\
   apt-get install -y locales openssh-server weechat tmux ;\
   mkdir /var/run/sshd ;\
-  useradd -m docker -s /bin/bash
+  useradd -m docker -s /bin/bash ;\
+  locale-gen
 
 EXPOSE 22
 EXPOSE 9001
