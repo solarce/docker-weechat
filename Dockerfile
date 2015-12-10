@@ -7,7 +7,7 @@ RUN \
   apt-get install -y locales openssh-server weechat tmux ;\
   mkdir /var/run/sshd ;\
   useradd -m docker -s /bin/bash ;\
-  locale-gen
+  locale-gen en_US.UTF-8
 
 EXPOSE 22
 EXPOSE 9001
