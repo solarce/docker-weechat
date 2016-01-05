@@ -3,10 +3,11 @@ MAINTAINER Philip Marc Schwartz philip@progmad.com
 
 RUN \
   apt-get -q -y update ;\
-  apt-get install -y python-software-properties ;\
+  apt-get install -y python-software-properties python-pip;\
   apt-get install -y locales openssh-server weechat tmux ;\
   mkdir /var/run/sshd ;\
   useradd -m docker -s /bin/bash ;\
+  pip install websocket-client ;\
   locale-gen en_US.UTF-8
 
 EXPOSE 22
