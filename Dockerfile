@@ -5,13 +5,23 @@ RUN \
   apt-get -q -y update ;\
   apt-get install -y python-software-properties python-pip;\
   apt-get install -y locales openssh-server weechat tmux ;\
+  apt-get install -y mosh ;\
   mkdir /var/run/sshd ;\
   useradd -m docker -s /bin/bash ;\
   pip install websocket-client ;\
   locale-gen en_US.UTF-8
 
+# SSH port
 EXPOSE 22
+
+# Mosh UDP ports
+EXPOSE 6000
+
+# Weechat api relay port
 EXPOSE 9001
+
+# Weechat irc relay port
+EXPOSE 9002
 
 ADD bashrc /home/docker/.bashrc
 ADD startup.sh /usr/bin/startup.sh
