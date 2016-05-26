@@ -15,7 +15,7 @@ RUN \
 EXPOSE 22
 
 # Mosh UDP ports
-EXPOSE 60000-60005
+EXPOSE 6000
 
 # Weechat api relay port
 EXPOSE 9001
