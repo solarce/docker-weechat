@@ -15,4 +15,4 @@ echo $PUB_KEYS > /home/$USER/.ssh/authorized_keys
 chown $USER /home/$USER/.ssh/authorized_keys
 
 echo "SSH Keys activated... booting!"
-/usr/sbin/sshd -D
+/usr/sbin/sshd -D && export LC_ALL=en_US.UTF-8 && /usr/bin/mosh-server new -p 6000
