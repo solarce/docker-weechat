@@ -3,6 +3,8 @@
 # Preconfigure the booted docker image with SSH keys
 #
 
+set -x
+
 USER=$1
 
 if [ -z "$PUB_KEYS" ]; then
