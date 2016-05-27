@@ -18,5 +18,4 @@ chown $USER /home/$USER/.ssh/authorized_keys
 
 echo "SSH Keys activated... booting!"
 export LC_ALL=en_US.UTF-8
-/usr/bin/mosh-server
-/usr/sbin/sshd -d && /usr/bin/mosh-server new -p 6000
+/usr/sbin/sshd -d && /usr/bin/mosh-server
